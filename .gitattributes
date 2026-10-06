@@ -1,0 +1,4 @@
+Armel/data/SP500_Historical_Constituents_2000_2025.zip filter=lfs diff=lfs merge=lfs -text
+Armel/data/adkkstnfk70e5cqb.csv filter=lfs diff=lfs merge=lfs -text
+Armel/data/qbj9jvhjabdxruhu.csv filter=lfs diff=lfs merge=lfs -text
+Armel/data/tzevp6zuss1ko5u3.csv filter=lfs diff=lfs merge=lfs -text
