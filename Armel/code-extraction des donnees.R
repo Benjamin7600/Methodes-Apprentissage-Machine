@@ -17,7 +17,7 @@ library("data.table")
 # ============================================================
 
 # Afficher les fichiers disponibles dans le dossier data
-list.files(here::here("data"))
+list.files(here::here("Armel", "data"))
 
 
 # ============================================================
@@ -66,22 +66,22 @@ unzip(file_sp500, list = TRUE)
 
 unzip(
   file_crsp,
-  exdir = here::here("data")
+  exdir = here::here("Armel", "data")
 )
 
 unzip(
   file_compustat,
-  exdir = here::here("data")
+  exdir = here::here("Armel", "data")
 )
 
 unzip(
   file_sp500,
-  exdir = here::here("data")
+  exdir = here::here("Armel", "data")
 )
 
 
 # Vérifier que les CSV ont bien été extraits
-list.files(here::here("data"))
+list.files(here::here("Armel", "data"))
 
 
 # ============================================================
@@ -93,7 +93,7 @@ list.files(here::here("data"))
 # fichier CSV issu de WRDS.
 
 crsp <- fread(
-  file = here::here("data", "adkkstnfk70e5cqb.csv")
+  file = here::here("Armel", "data", "adkkstnfk70e5cqb.csv")
 )
 
 
@@ -122,7 +122,7 @@ stopifnot(nrow(crsp) > 0)
 # Importation du fichier Compustat extrait du ZIP.
 
 compustat <- fread(
-  file = here::here("data", "qbj9jvhjabdxruhu.csv")
+  file = here::here("Armel", "data", "qbj9jvhjabdxruhu.csv")
 )
 
 
@@ -151,7 +151,7 @@ stopifnot(nrow(compustat) > 0)
 # Importation du fichier historique des constituants du S&P 500.
 
 sp500 <- fread(
-  file = here::here("data", "tzevp6zuss1ko5u3.csv")
+  file = here::here("Armel", "data", "tzevp6zuss1ko5u3.csv")
 )
 
 
@@ -5020,7 +5020,7 @@ length(expanding_folds)
 
 # Créer le dossier de sauvegarde s'il n'existe pas
 dir.create(
-  "data/données_preparees",
+  "Armel/data/donnees_preparees",
   recursive = TRUE,
   showWarnings = FALSE
 )
@@ -5032,7 +5032,7 @@ dir.create(
 
 saveRDS(
   data_model,
-  "data/données_preparees/data_model.rds"
+  "Armel/data/donnees_preparees/data_model.rds"
 )
 
 
@@ -5042,7 +5042,7 @@ saveRDS(
 
 saveRDS(
   expanding_folds,
-  "data/données_preparees/expanding_folds.rds"
+  "Armel/data/donnees_preparees/expanding_folds.rds"
 )
 
 
@@ -5052,7 +5052,7 @@ saveRDS(
 
 saveRDS(
   features_final,
-  "data/données_preparees/features_final.rds"
+  "Armel/data/donnees_preparees/features_final.rds"
 )
 
 
@@ -5061,13 +5061,13 @@ saveRDS(
 # ------------------------------------------------------------
 
 file.exists(
-  "data/données_preparees/data_model.rds"
+  "Armel/data/donnees_preparees/data_model.rds"
 )
 
 file.exists(
-  "data/données_preparees/expanding_folds.rds"
+  "Armel/data/donnees_preparees/expanding_folds.rds"
 )
 
 file.exists(
-  "data/données_preparees/features_final.rds"
+  "Armel/data/donnees_preparees/features_final.rds"
 )

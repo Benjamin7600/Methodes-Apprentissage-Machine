@@ -10,15 +10,15 @@ library(data.table)
 # ------------------------------------------------------------
 
 data_model <- readRDS(
-  "data/données_preparees/data_model.rds"
+  "Armel/data/donnees_preparees/data_model.rds"
 )
 
 expanding_folds <- readRDS(
-  "data/données_preparees/expanding_folds.rds"
+  "Armel/data/donnees_preparees/expanding_folds.rds"
 )
 
 features_final <- readRDS(
-  "data/données_preparees/features_final.rds"
+  "Armel/data/donnees_preparees/features_final.rds"
 )
 
 
